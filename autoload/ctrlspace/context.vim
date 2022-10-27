@@ -71,6 +71,7 @@ let s:configuration = {
                     \ "IgnoredFiles":              '\v(tmp|temp)[\/]',
                     \ "SearchTiming":              200,
                     \ "FileEngine":                "auto",
+                    \ "AllowResize":               1,
                     \ }
 
 function! s:init() abort

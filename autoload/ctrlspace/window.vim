@@ -182,7 +182,9 @@ function! ctrlspace#window#Kill(pluginBuffer, final) abort
             call ctrlspace#search#AppendToSearchHistory()
         endif
 
-        call ctrlspace#window#GoToStartWindow()
+        if s:config.AllowResize
+            call ctrlspace#window#GoToStartWindow()
+        endif
 
         if s:modes.Zoom.Enabled
             exec ":b " . s:modes.Zoom.Data.Buffer
